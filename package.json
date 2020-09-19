@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/GuilhemDeMarco/spacebot/issues"
   },
-  "homepage": "https://github.com/GuilhemDeMarco/spacebot#readme"
+  "homepage": "https://github.com/GuilhemDeMarco/spacebot#readme",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
 }
