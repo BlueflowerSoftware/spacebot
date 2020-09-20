@@ -21,9 +21,16 @@ client.on('message', async message => {
   contentArray.shift()
   const args = contentArray
 
-  console.log(command);
-  console.log(args);
+  console.log("Command:", command);
+  console.log("Arguments:", args);
+	if (command == "test") {
+		console.log("test command");
+		console.log(testObject);
+		console.log(testObject["test"]);
+		testObject[command]();
+	}
 
+/*
 	if (command == "goto") {
 		let playerID = message.author.id;
 		let playerDestinationPosition = [args[0],args[1]];
@@ -32,7 +39,7 @@ client.on('message', async message => {
 
 		//currentlyMoving.push(message.author.id);
 		//console.log(currentlyMoving);
-	}
+	}*/
 })
 
 client.login(config.token);
@@ -41,6 +48,13 @@ client.login(config.token);
 setInterval(() => {
 	//movePlayers()
 }, 1000)
+
+const testObject = {
+	"test": function () {
+		console.log("test function");
+	}
+}
+
 
 /*
 let playerCurrentPosition = []
