@@ -7,6 +7,12 @@ client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
 
+// !! MAIN LOOP !!
+setInterval(() => {
+	//Calculate new position of moving players
+
+}, 1000)
+
 client.on('message', async message => {
   if(message.author.bot) return;
   // This game can only be played in the bot's dms
