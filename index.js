@@ -39,9 +39,10 @@ client.login(config.token);
 
 // !! MAIN LOOP !!
 setInterval(() => {
-	movePlayers()
+	//movePlayers()
 }, 1000)
 
+/*
 let playerCurrentPosition = []
 function movePlayers() {
 	if (currentlyMovingPlayers.length != 0) {
@@ -53,7 +54,7 @@ function movePlayers() {
 				playerCurrentPosition = [0,0];
 			}
 			let playerDestinationPosition = movingPlayer[1];
-			console.log(playerCurrentPosition, playerDestinationPosition);
+
 			let journeyLength = Math.round(Math.hypot(playerCurrentPosition[0]-playerDestinationPosition[0],
 				 playerCurrentPosition[1]-playerDestinationPosition[1])) //Math.hypot(x2-x1, y2-y1)
 
@@ -75,11 +76,15 @@ function movePlayers() {
 			if (journeyLength <= 0) {
 				const index = currentlyMovingPlayers.indexOf(movingPlayer);
 					if (index > -1) {
+						playerCurrentPosition[0] = parseFloat(playerDestinationPosition[0])
+						playerCurrentPosition[1] = parseFloat(playerDestinationPosition[1])
   					currentlyMovingPlayers.splice(index, 1);
 					}
 			}
-
+			console.log(playerCurrentPosition, playerDestinationPosition);
 		}
 		console.log('moving');
+
 	}
 }
+*/
